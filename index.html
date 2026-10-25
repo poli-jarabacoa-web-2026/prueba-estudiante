@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UNIDAD 9: mejora el título y escribe la descripción de la página -->
+  <title>Jarabacoa Aventura</title>
+  <meta name="description" content="">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== ENCABEZADO Y MENÚ (ya está listo, es igual en las 3 páginas) ===== -->
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span>Jarabacoa Aventura</span>
+      </a>
+      <button type="button" class="menu-boton" id="menuBoton" aria-expanded="false" aria-controls="menuPrincipal">
+        <span class="sr-only">Abrir menú</span>&#9776;
+      </button>
+      <nav id="menuPrincipal" class="menu" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="excursiones.html">Excursiones</a></li>
+          <li><a href="reservar.html" class="boton-menu">Reservar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== SECCIÓN PRINCIPAL ===== -->
+    <section class="hero">
+      <div class="contenedor hero-texto">
+        <!-- UNIDAD 3: escribe aquí
+             1. El título principal con <h1> ... </h1>
+             2. Un párrafo con <p> ... </p>
+             3. UNIDAD 4: el botón:  <a class="boton" href="reservar.html">Reservar mi excursión</a>  -->
+
+      </div>
+    </section>
+
+    <!-- ===== VENTAJAS ===== -->
+    <section class="contenedor seccion">
+      <!-- UNIDAD 3: escribe el título <h2>¿Por qué elegirnos?</h2> -->
+
+      <div class="tarjetas">
+        <!-- UNIDAD 3: escribe aquí 3 ventajas. Cada una se escribe así:
+             <article class="tarjeta">
+               <h3>Título de la ventaja</h3>
+               <p>Explicación de la ventaja.</p>
+             </article>  -->
+
+      </div>
+    </section>
+
+    <!-- ===== VIDEO ===== -->
+    <section class="contenedor seccion">
+      <!-- UNIDAD 6: escribe un <h2> y el video del recorrido (media/recorrido.mp4) -->
+
+    </section>
+
+    <!-- ===== CLIMA (ya está listo; en la Unidad 11 lo adaptas a tu comunidad) ===== -->
+    <section class="contenedor seccion clima" aria-live="polite">
+      <h2>El clima hoy en Jarabacoa</h2>
+      <div id="clima" class="clima-caja">
+        <p>Cargando el clima...</p>
+      </div>
+      <p class="nota">Datos de <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>.</p>
+    </section>
+
+    <!-- ===== EXCURSIONES DESTACADAS ===== -->
+    <section class="contenedor seccion">
+      <!-- UNIDAD 4: escribe el <h2>Excursiones destacadas</h2> -->
+
+      <div class="tarjetas">
+        <!-- UNIDAD 4: escribe aquí 3 excursiones con foto. Cada una así:
+             <article class="tarjeta foto">
+               <img src="img/rafting.webp" alt="Describe la foto" width="1200" height="800" loading="lazy">
+               <h3>Nombre de la excursión</h3>
+               <p>Desde RD$ ... por persona.</p>
+             </article>  -->
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="pie">
+    <div class="contenedor">
+      <!-- UNIDAD 3: nombre y dirección del negocio, y &copy; 2026
+           UNIDAD 4: el teléfono con tel: y el correo con mailto: -->
+
+    </div>
+  </footer>
+
+  <!-- ===== PROGRAMAS (JavaScript). No los borres. ===== -->
+  <script src="js/menu.js"></script>
+  <script src="js/clima.js"></script>
+</body>
+</html>

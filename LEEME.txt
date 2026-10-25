@@ -1,0 +1,19 @@
+PLANTILLA BASE - JARABACOA AVENTURA
+Módulo INCO-MF034_3: Diseño de portales web y recursos multimedia
+
+¿Qué hay en esta carpeta?
+  index.html        Página de inicio      (la completas en las unidades 3, 4, 6 y 9)
+  excursiones.html  Excursiones y precios (unidades 4, 5, 6 y 9)
+  reservar.html     Formulario de reserva (unidades 5, 6 y 9)
+  css/estilos.css   El diseño. Ya está listo. En la unidad 7 cambias los colores y la letra.
+  js/               Los programas: menú, clima y reserva. Ya están listos.
+  img/  media/      Fotos, logo, video, audio y subtítulos para usar en tu sitio.
+  extras/           El archivo publicar.yml que usarás en la unidad 14.
+
+Cómo trabajar:
+  1. Abre ESTA carpeta en Visual Studio Code (Archivo > Abrir carpeta).
+  2. Busca los comentarios que dicen UNIDAD 3, UNIDAD 4, etc.
+  3. Escribe tu código debajo de cada comentario.
+  4. Guarda (Ctrl + S) y mira el resultado con Live Server (Go Live).
+
+No cambies los id ni los nombres de archivos: los programas los necesitan.

@@ -1,0 +1,520 @@
+/* =========================================================
+   Jarabacoa Aventura - Hoja de estilos principal
+   Orden: 1. Variables  2. Base  3. Encabezado y menú
+          4. Secciones  5. Tarjetas  6. Tablas  7. Formularios
+          8. Multimedia  9. Pie  10. Responsivo  11. Impresión
+   ========================================================= */
+
+/* =========================================================
+   1. VARIABLES  >>>>>  CAMBIA AQUÍ EL DISEÑO DE TU SITIO  <<<<<
+   Cambia los colores y la letra por los de tu guía de estilo.
+   Todo el sitio se actualiza solo. (Unidad 7)
+   ========================================================= */
+:root {
+  --verde: #1b5e3b;          /* color principal: títulos, botones, pie */
+  --verde-claro: #e6f2ea;    /* fondo suave de tarjetas y menú */
+  --azul-rio: #2c7da0;       /* color de los enlaces */
+  --amarillo: #ffc857;       /* color de acento: foco, enlaces del pie */
+  --texto: #1f2a24;          /* color del texto normal */
+  --gris: #5c6b63;           /* textos secundarios */
+  --blanco: #ffffff;
+  --error: #b42318;
+  --fuente: "Segoe UI", Roboto, Arial, sans-serif;   /* tipo de letra */
+  --radio: 12px;             /* redondeo de las esquinas */
+  --sombra: 0 4px 14px rgba(0, 0, 0, 0.08);
+  --ancho-maximo: 1100px;    /* ancho máximo del contenido */
+}
+
+/* =========================================================
+   DE AQUÍ PARA ABAJO: estilos ya preparados.
+   Puedes leerlos y probar cambios, pero guarda una copia antes.
+   ========================================================= */
+
+/* 2. BASE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background-color: #fbfdfb;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--azul-rio);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 2px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  color: var(--verde);
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.seccion {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.nota {
+  font-size: 0.85rem;
+  color: var(--gris);
+}
+
+/* Enlace para saltar al contenido (accesibilidad con teclado) */
+.saltar {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: var(--amarillo);
+  color: var(--texto);
+  padding: 8px 12px;
+  z-index: 100;
+}
+
+.saltar:focus {
+  left: 8px;
+}
+
+/* Texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* Botones */
+.boton {
+  display: inline-block;
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.boton:hover {
+  background-color: #144a2e;
+  transform: translateY(-2px);
+}
+
+.boton.secundario {
+  background-color: transparent;
+  color: var(--verde);
+  border: 2px solid var(--verde);
+}
+
+/* 3. ENCABEZADO Y MENÚ */
+.encabezado {
+  background-color: var(--blanco);
+  box-shadow: var(--sombra);
+  position: sticky;   /* el menú se queda visible al hacer scroll */
+  top: 0;
+  z-index: 10;
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--verde);
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--texto);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+  background-color: var(--verde-claro);
+  color: var(--verde);
+}
+
+.menu .boton-menu {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.menu-boton {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--verde);
+}
+
+/* 4. SECCIONES */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../img/portada.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--blanco);
+  padding: 110px 0;
+}
+
+.hero h1 {
+  color: var(--blanco);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  max-width: 700px;
+  margin-top: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.clima-caja {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.clima-dato {
+  background: var(--verde-claro);
+  border-radius: var(--radio);
+  padding: 16px 20px;
+  min-width: 150px;
+}
+
+.clima-dato strong {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--verde);
+}
+
+/* 5. TARJETAS (Grid) */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 20px;
+}
+
+.tarjeta.foto {
+  padding: 0 0 16px 0;
+  overflow: hidden;
+}
+
+.tarjeta.foto img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tarjeta.foto h2,
+.tarjeta.foto h3,
+.tarjeta.foto p {
+  padding: 0 16px;
+}
+
+.tarjeta.foto h2 {
+  font-size: 1.25rem;
+}
+
+/* 6. TABLAS */
+.tabla-desplazable {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanco);
+}
+
+caption {
+  text-align: left;
+  font-style: italic;
+  color: var(--gris);
+  padding: 8px 0;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #dde5df;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f3f8f4;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+tfoot td {
+  font-size: 0.9rem;
+  color: var(--gris);
+  text-align: left;
+}
+
+/* 7. FORMULARIOS */
+.formulario {
+  max-width: 640px;
+}
+
+fieldset {
+  border: 1px solid #cfdcd3;
+  border-radius: var(--radio);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: 700;
+  color: var(--verde);
+  padding: 0 6px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #9fb3a6;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.opciones label,
+label.check {
+  font-weight: 400;
+}
+
+.grupo-titulo {
+  font-weight: 600;
+  margin: 12px 0 0;
+}
+
+.campo-invalido {
+  border-color: var(--error) !important;
+  background-color: #fff5f4;
+}
+
+.error {
+  display: block;
+  color: var(--error);
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.valor-rango {
+  margin: 4px 0 0;
+  font-weight: 600;
+  color: var(--verde);
+}
+
+.total {
+  font-size: 1.2rem;
+}
+
+.mensaje {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: var(--radio);
+  background-color: var(--verde-claro);
+  border-left: 6px solid var(--verde);
+}
+
+/* 8. MULTIMEDIA */
+.video-principal {
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radio);
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  border-radius: var(--radio);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+figure img:hover {
+  transform: scale(1.03);
+}
+
+figcaption {
+  text-align: center;
+  color: var(--gris);
+  font-size: 0.9rem;
+}
+
+.mapa {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: var(--radio);
+}
+
+/* 9. PIE */
+.pie {
+  background-color: var(--verde);
+  color: var(--blanco);
+  padding: 24px 0;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+.pie a {
+  color: var(--amarillo);
+}
+
+/* 10. RESPONSIVO (tabletas y celulares) */
+@media (max-width: 900px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-boton {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+  }
+
+  .menu.abierto {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+}
+
+/* 11. IMPRESIÓN (cuando se imprime la página) */
+@media print {
+  .encabezado,
+  .pie,
+  .boton,
+  .mapa,
+  video,
+  audio {
+    display: none;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+  }
+}

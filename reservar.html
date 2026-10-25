@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UNIDAD 9: mejora el título y escribe la descripción de la página -->
+  <title>Reservar | Jarabacoa Aventura</title>
+  <meta name="description" content="">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== ENCABEZADO Y MENÚ (ya está listo) ===== -->
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span>Jarabacoa Aventura</span>
+      </a>
+      <button type="button" class="menu-boton" id="menuBoton" aria-expanded="false" aria-controls="menuPrincipal">
+        <span class="sr-only">Abrir menú</span>&#9776;
+      </button>
+      <nav id="menuPrincipal" class="menu" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="excursiones.html">Excursiones</a></li>
+          <li><a href="reservar.html" class="boton-menu" aria-current="page">Reservar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor seccion">
+    <h1>Reserva tu excursión</h1>
+    <p>Completa el formulario. Los campos con * son obligatorios.</p>
+
+    <form id="formReserva" class="formulario">
+      <fieldset>
+        <legend>Tus datos</legend>
+        <!-- UNIDAD 5: escribe aquí los campos (cada uno con su label):
+             nombre (id="nombre"), correo (id="correo") y teléfono (id="telefono") -->
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Tu excursión</legend>
+        <!-- UNIDAD 5: escribe aquí, con estos id EXACTOS (el programa los busca):
+             - la lista desplegable de excursiones    id="excursion"  (el value de cada opción es el precio)
+             - la fecha                               id="fecha"
+             - el deslizador de personas              id="personas"  (type="range" min="1" max="12" value="2")
+             - <p class="valor-rango">Personas: <output id="personasValor">2</output></p>
+             - las opciones de transporte (radio)     name="transporte" con value="si" y value="no"
+             - el área de comentarios                 id="comentario"
+             - la casilla de aceptar las normas       id="acepto"  -->
+
+      </fieldset>
+
+      <!-- Ya está listo: el total, los botones y el mensaje -->
+      <p class="total">Total estimado: <strong id="total">RD$ 0.00</strong></p>
+      <button type="submit" class="boton">Enviar reserva</button>
+      <button type="reset" class="boton secundario">Limpiar</button>
+    </form>
+
+    <div id="mensaje" class="mensaje" role="status" hidden></div>
+
+    <!-- UNIDAD 6: escribe <h2>¿Dónde estamos?</h2> y el mapa de Jarabacoa con un <iframe class="mapa" ...> -->
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <!-- UNIDAD 3: copia aquí el mismo pie de la página de inicio -->
+
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/reserva.js"></script>
+</body>
+</html>

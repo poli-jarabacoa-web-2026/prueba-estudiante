@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- UNIDAD 9: mejora el título y escribe la descripción de la página -->
+  <title>Excursiones | Jarabacoa Aventura</title>
+  <meta name="description" content="">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===== ENCABEZADO Y MENÚ (ya está listo) ===== -->
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="40" height="40">
+        <span>Jarabacoa Aventura</span>
+      </a>
+      <button type="button" class="menu-boton" id="menuBoton" aria-expanded="false" aria-controls="menuPrincipal">
+        <span class="sr-only">Abrir menú</span>&#9776;
+      </button>
+      <nav id="menuPrincipal" class="menu" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="excursiones.html" aria-current="page">Excursiones</a></li>
+          <li><a href="reservar.html" class="boton-menu">Reservar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor seccion">
+    <!-- UNIDAD 4: escribe el <h1>Excursiones y precios</h1>
+         y un párrafo con anclas: Ir a: tabla de precios · galería · recomendaciones -->
+
+
+    <!-- ===== TARJETAS DE EXCURSIONES ===== -->
+    <div class="tarjetas">
+      <!-- UNIDAD 4: escribe aquí las 5 excursiones (rafting, cascada, pico-duarte, parapente, cafe).
+           Igual que en el inicio, pero con <h2> en vez de <h3>:
+           <article class="tarjeta foto">
+             <img src="img/..." alt="..." width="1200" height="800" loading="lazy">
+             <h2>Nombre</h2>
+             <p>Descripción.</p>
+           </article>  -->
+
+    </div>
+
+    <!-- ===== TABLA DE PRECIOS ===== -->
+    <!-- UNIDAD 5: escribe <h2 id="tabla-precios">Tabla de precios</h2> y la tabla
+         dentro de este div: -->
+    <div class="tabla-desplazable">
+
+    </div>
+
+    <!-- ===== GALERÍA ===== -->
+    <!-- UNIDAD 6: escribe <h2 id="galeria">Galería</h2>, el audio del río (media/rio.mp3)
+         y las fotos dentro de este div (cada foto en <figure> con <figcaption>): -->
+    <div class="galeria">
+
+    </div>
+
+    <!-- ===== RECOMENDACIONES ===== -->
+    <!-- UNIDAD 4: escribe <h2 id="recomendaciones">Recomendaciones</h2>,
+         una lista ordenada <ol> y el enlace "Volver arriba" (href="#contenido") -->
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <!-- UNIDAD 3: copia aquí el mismo pie de la página de inicio -->
+
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+</body>
+</html>
